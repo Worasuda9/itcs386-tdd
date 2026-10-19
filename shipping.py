@@ -1,3 +1,6 @@
+from math import ceil
+
+
 # shipping.py
 def shipping_fee(weight_kg):
     """Return the shipping fee in baht for a parcel of weight_kg kilograms.
@@ -9,11 +12,11 @@ def shipping_fee(weight_kg):
             started kilogram above 5 kg. A 5.2 kg parcel costs 70 baht.
     
     """
-    if weight_kg < 0:
+    if weight_kg <= 0:
         raise ValueError("weight must be more than 0 kg")
-    if weight_kg < 1:
+    if weight_kg <= 1:
         return 40
     if weight_kg <= 5:
         return 60
-    extra = int(weight_kg - 5)
+    extra = ceil(weight_kg - 5)
     return 60 + 10 * extra
