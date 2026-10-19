@@ -23,4 +23,4 @@ def test_equality():
     assert flour.times(3) == Quantity(600, "g")
 
 def test_grams_are_not_ounces():
-    assert Quantity(1, "g") != Quantity(1, "oz")
+    assert Quantity.grams(1) != Quantity.ounces(1)
