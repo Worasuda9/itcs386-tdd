@@ -1,5 +1,4 @@
 """
-    ☐ 1 oz is not the same as 1 g
     ☐ 200 g + 300 g = 500 g
     ☐ 200 g + 1 oz, reduced to grams, using a conversion rate
     ☐ (200 g + 1 oz) × 2
@@ -7,7 +6,7 @@
 """
 
 # test_kitchen.py
-from kitchen import Quantity, grams, ounces
+from kitchen import Quantity, grams, ounces, Converter
 
 def test_multiplication():
     flour = grams(200)
